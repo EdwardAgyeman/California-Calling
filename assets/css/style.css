@@ -1,5 +1,4 @@
-/* 1. California Map richtig ausrichten
-2. Bear Pic Two richtig ausrichten (Responsive)
+/* 1. Bear Pic Two richtig ausrichten (Responsive)
 3. Gesamte Website Responsive machen
 4. Die beiden animierten Schriftzüge einfügen */
 /* General-------------------------------------------------------------------------------------------------------------------------- */
@@ -82,7 +81,10 @@ p {
     background-color: white;
     color: black;
 }
-
+#calling {
+    color: black;
+    -webkit-text-stroke: 2px white;
+}
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
 #stats {
@@ -92,7 +94,7 @@ p {
     background-image: url(../img/map.svg);
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: contain;
+    background-size: 37%;
 }
 
 #stats p {
@@ -203,12 +205,28 @@ p {
     margin-left: 60%;
     /* margin-bottom: 100px; */
     margin-top: 130px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 #poppy-bear {
     background-color: white;
     margin-bottom: 100px;
+    overflow: hidden;
+}
+#rotate {
+    animation: rotate 5s infinite linear;
+    width: 40%;
+    margin-left: 77%;
+    margin-top: -170px;
+    
+}
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 #container-poppy-bear {
     display: flex;
@@ -218,7 +236,7 @@ p {
 #poppy-bear h1 {
     color: black;
     font-size: 6rem;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 #poppy-bear h1 span {
     font-family: 'Work Sans', sans-serif;
@@ -228,7 +246,7 @@ p {
     color: black;
     font-size: 2rem;
     width: 40%;
-    margin-top: 200px;
+    margin-top: 163px;
 }
 #poppy-bear p span {
     color: black;
@@ -241,25 +259,72 @@ p {
 #rosebear-big {
     width: 50%;
     /* position: absolute; */
-    margin-top: 0px;
-    margin-left: 20%;
+    margin-top: -70px;
+    margin-left: 45%;
 }
 #rosebear-small {
     width: 30%;
     /* position: absolute; */
-    margin-top: 0px;
-    margin-left: 2%;
+    margin-bottom: -635px;
+    margin-left: 20%;
+    position: absolute;
+    z-index: 1;
 }
 /* ------------------------------------------------------------------------------------------------------------------------------------- */
+/* #banner {
+    font-size: 5rem;
+    background-color: white;
+} */
 #outro {
     background: black;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
+section #banner-div{ 
+    font-size: 4rem;
+    color: black;
+    background-color: white;
+    height: 100px;
+    width: 1000px;
+    transform: rotateZ(45deg);
+    position: absolute;
+    top: 30%;
+    right: -15%;
+}
+section div #banner{ 
+    font-size: 4rem;
+    color: black;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    animation: banner 5s infinite linear;
+}
+section div #banner span{ 
+    font-size: 4rem;
+    font-family: "Larish Neue 2";
+    -webkit-text-stroke: 2px black;
+}
+@keyframes banner {
+    0%{
+        left: 0;
+    }
+    50% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
 #outro p {
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     width: 40%;
-    /* margin: 0 0 0 0; */
+    margin-bottom: 30px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
 }
 #outro p span {
     color: white;
@@ -268,19 +333,46 @@ p {
 }
 #outro a {
     border: white solid 1px;
-    /* margin: 30px 30px; */
     padding: 10px 20px;
     text-decoration: none;
     color: white;
     font-family: 'Work Sans', sans-serif;
+    position: absolute;
+    left: 5%;
+    bottom: 40%;
 }
 #outro a:hover {
     border: white solid 1px;
     background-color: white;
     color: black;
 }
+i {
+    color: gray;
+}
+#outro p:nth-of-type(2) {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+}
+#logo-footer {
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+}
+#logo-footer img {
+    width: 20%;
+    /* float: right; */
+}
 
-
+#social-media {
+    color: white;
+    position: absolute;
+    bottom: 11%;
+    left: 5%;
+}
 
 /* Media-Queries------------------------------------------------------------------------------------------------------------------------- */
 

@@ -1,3 +1,294 @@
+/* 1. California Map richtig ausrichten
+2. Bear Pic Two richtig ausrichten (Responsive)
+3. Gesamte Website Responsive machen
+4. Die beiden animierten Schriftzüge einfügen */
+/* General-------------------------------------------------------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: "Larish Neue";
+    src: url("../font/LarishNeueSemibold.woff");
+}
+
+@font-face {
+    font-family: "Larish Neue 2";
+    src: url("../font/Larish\ Neue\ Semibold.woff2");
+}
+
 body {
     margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* Section-1-------------------------------------------------------------------------------------------------------------------------- */
+
+/* Finde eine Lösung für h1 span (nur die Umrandung weiß) */
+
+#vertical-line {
+    width: 1px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+}
+
+#intro {
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#intro p {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#intro h1 {
+    font-family: "Larish Neue";
+    font-size: 6rem;
+    margin: 0;
+}
+
+#intro-footer {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+#intro-footer img {
+    float: left;
+}
+
+#intro-footer a {
+    border: white solid 1px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    float: right;
+}
+
+#intro-footer a:hover {
+    border: white solid 1px;
+    background-color: white;
+    color: black;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+#stats {
+    /* height: 160vh; */
+    background-color: #000;
+    color: white;
+    background-image: url(../img/map.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+}
+
+#stats p {
+    font-size: 6em;
+    width: 60%;
+    margin: 0 0 0 10vw;
+    line-height: 0.8;
+}
+
+#stats-numbers {
+    margin-top: 100px;
+    /*Ändere ggf. die Unit wegen responsiveness*/
+}
+
+#stats-numbers span {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+#middle h1 {
+    font-family: "Larish Neue";
+    font-size: 5rem;
+    margin: 20vh 0 0 30vw;
+}
+
+#middle p {
+    width: 30vw;
+    margin-left: 30vw;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#middle p:nth-of-type(2) {
+    margin-top: 190px;
+    margin-bottom: 100px;
+}
+
+.action-images {
+    /* width: 300px; */
+    width: 20%;
+}
+
+#action-1 {
+    margin-left: 75%;
+    margin-top: -40px;
+}
+#action-2 {
+    margin-left: 7%;
+    margin-top: 100px;
+}
+#action-3 {
+    margin-left: 80%;
+    margin-top: 50px;
+}
+#action-4 {
+    margin-left: 20%;
+    margin-top: 20px;
+}
+#action-5 {
+    margin-left: 65vw;
+    margin-top: 30px;
+}
+#action-6 {
+    margin-top: -90px;
+}
+#action-7 {
+    margin-left: 28%;
+    margin-bottom: -75px;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+#golden-bear {
+    background-color: black;
+}
+#golden-bear div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#golden-bear h1 {
+    color: white;
+    font-size: 6rem;
+    margin-top: 100px;
+}
+#golden-bear h1 span {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+}
+#golden-bear p {
+    color: white;
+    font-size: 2rem;
+    width: 40%;
+    margin-top: 200px;
+}
+#golden-bear p span {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+}
+#golden-bear-pic-one {
+    width: 50%;
+    margin-left: 15%;
+    margin-bottom: -100px;
+}
+#golden-bear-pic-two {
+    position: absolute;
+    width: 25%;
+    margin-left: 60%;
+    /* margin-bottom: 100px; */
+    margin-top: 130px;
+    z-index: 1;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+#poppy-bear {
+    background-color: white;
+    margin-bottom: 100px;
+}
+#container-poppy-bear {
+    display: flex;
+    justify-content: space-around;
+}
+
+#poppy-bear h1 {
+    color: black;
+    font-size: 6rem;
+    margin-top: 100px;
+}
+#poppy-bear h1 span {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+}
+#poppy-bear p {
+    color: black;
+    font-size: 2rem;
+    width: 40%;
+    margin-top: 200px;
+}
+#poppy-bear p span {
+    color: black;
+    font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+}
+/* #container-rosebear {
+    position: relative;
+} */
+#rosebear-big {
+    width: 50%;
+    /* position: absolute; */
+    margin-top: 0px;
+    margin-left: 20%;
+}
+#rosebear-small {
+    width: 30%;
+    /* position: absolute; */
+    margin-top: 0px;
+    margin-left: 2%;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+#outro {
+    background: black;
+    height: 100vh;
+}
+#outro p {
+    color: white;
+    font-size: 2rem;
+    width: 40%;
+    /* margin: 0 0 0 0; */
+}
+#outro p span {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+}
+#outro a {
+    border: white solid 1px;
+    /* margin: 30px 30px; */
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+#outro a:hover {
+    border: white solid 1px;
+    background-color: white;
+    color: black;
+}
+
+
+
+/* Media-Queries------------------------------------------------------------------------------------------------------------------------- */
+
+@media(max-width: 580px) {
+    * {
+        color: green;
+    }
+    #intro h1 {
+        font-size: 3rem;
+    }
 }
